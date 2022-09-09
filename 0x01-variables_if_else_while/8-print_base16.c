@@ -5,21 +5,19 @@
 /**
  * main - Entry point
  *
- * Return:0
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int i, y;
-	for (i = 0; i < 10; i++)
-	{
-		putchar (i + '0');
-	}
-	for (y = 'a'; y <= 'f'; y++)
-	{
-		putchar (y);
-	}
-
+	int d;
+	char low;
+	
+	for (d = '0'; i <= '9'; d++)
+		putchar (d);
+	for (low = 'a'; low <= 'f'; low++)
+		putchar (low);
 putchar('\n');
+	
 return (0);
 }
