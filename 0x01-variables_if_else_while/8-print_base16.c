@@ -1,25 +1,21 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - Entry point
+ * main - A program that prints all the numbers of base 16.
  *
- * Return:0
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i, y;
-	
-	for (i = 0; i < 10; i++)
-	{
-		putchar (i + '0');
-	}
-	for (y = 'a'; y <= 'f'; y++)
-	{
-		putchar (y);
-	}
+	char character;
+	int num;
 
-putchar('\n');
-	
-return (0);
+	for (num = 0; num <= 9; num++)
+		putchar(num + '0');
+	for (character = 'a'; character <= 'f'; character++)
+	{
+		putchar(character);
+	}
+	putchar('\n');
+	return (0);
 }
