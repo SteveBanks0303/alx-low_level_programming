@@ -1,44 +1,37 @@
 #include "main.h"
 /**
- * print_number - function to print integers
- *
- * @n: int type
- *
-   Return: return integer values
+ * print_number - prints numbers
+ * @n: number to be printed
+ * Return:void
  */
 
 void print_number(int n)
 {
-	int a, remainder, length, count;
-	int m = n;
-	int pcounter = 0;
-	int power;
 
-	if (n == 0)
-	{
-		_putchar('0');
-	}
+	int d = 1, i = 0, ii = 0;
+
 	if (n < 0)
 	{
 		_putchar('-');
+		n = -n;
 	}
-	for (length = 0; n != 0; length++)
+
+	while (n / d != 0)
 	{
-		n /= 10;
+		d *= 10;
+		i++;
 	}
-	for (power = 1; pcounter < (length - 1); pcounter++)
+	d = d / 10;
+
+	while (ii < i)
 	{
-		power *= 10;
+		_putchar('0' + n / d);
+		n = n - (n / d) * d;
+		d = d / 10;
+		ii++;
 	}
-	for (count = 0; count < length; count++)
-	{
-		a = m;
-		if (m < 0)
-			_putchar(((m / power) * -1) + '0');
-		else
-			_putchar((m / power) + '0');
-		remainder = a % power;
-		power /= 10;
-		m = remainder;
-	}
+
+	if (i == 0)
+		_putchar('0' + n);
+
 }
