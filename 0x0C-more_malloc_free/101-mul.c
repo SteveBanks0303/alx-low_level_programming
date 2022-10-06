@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -40,7 +40,7 @@ char *create_xarray(int size)
 
 	array = malloc(sizeof(char) * size);
 
-	if (!array)
+	if (array == NULL)
 		exit(98);
 
 	for (index = 0; index < (size - 1); index++)
@@ -81,7 +81,7 @@ int get_digit(char c)
 	if (digit < 0 || digit > 9)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
 	return (digit);
